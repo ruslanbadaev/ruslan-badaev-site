@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ruslan_badaev_site/controllers/test_controller.dart';
+import "package:hovering/hovering.dart";
 
 class Home extends StatelessWidget {
   final testController = Get.put(TestController());
@@ -21,7 +22,6 @@ class Home extends StatelessWidget {
         ),
         child: Center(
           child: Container(
-            color: Colors.amber,
             height: MediaQuery.of(context).size.height * 0.8,
             width: MediaQuery.of(context).size.width * 0.9,
             child: Row(
@@ -30,18 +30,50 @@ class Home extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(18),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          gradient: LinearGradient(
+                              colors: [
+                                Colors.grey[900].withOpacity(.8),
+                                Colors.grey[850].withOpacity(.8),
+                              ],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter),
+                        ),
+                        height: MediaQuery.of(context).size.height * 0.25,
+                        width: MediaQuery.of(context).size.height * 0.25,
+                        child: Image.network(
+                            'https://sun9-8.userapi.com/impg/6QTvqofu4sBJr7-vgGrPTBQbX9eHEZYFqd5Plg/7rlD2FZFckg.jpg?size=953x953&quality=96&sign=ad64ceea2b96a770d42b6c3046fa8c6f&type=album'),
+                      ),
+                    ),
                     Container(
-                      color: Colors.red,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(18),
+                        gradient: LinearGradient(
+                            colors: [
+                              Colors.grey[900].withOpacity(.8),
+                              Colors.grey[850].withOpacity(.8),
+                            ],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter),
+                      ),
                       height: MediaQuery.of(context).size.height * 0.25,
                       width: MediaQuery.of(context).size.height * 0.25,
                     ),
                     Container(
-                      color: Colors.red,
-                      height: MediaQuery.of(context).size.height * 0.25,
-                      width: MediaQuery.of(context).size.height * 0.25,
-                    ),
-                    Container(
-                      color: Colors.red,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(18),
+                        gradient: LinearGradient(
+                            colors: [
+                              Colors.grey[900].withOpacity(.8),
+                              Colors.grey[850].withOpacity(.8),
+                            ],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter),
+                      ),
                       height: MediaQuery.of(context).size.height * 0.25,
                       width: MediaQuery.of(context).size.height * 0.25,
                     ),
@@ -51,10 +83,75 @@ class Home extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Container(
-                      color: Colors.red,
-                      height: MediaQuery.of(context).size.height * 0.8,
-                      width: MediaQuery.of(context).size.width * 0.7,
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(18),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          gradient: LinearGradient(
+                              colors: [
+                                Colors.grey[900].withOpacity(.8),
+                                Colors.grey[850].withOpacity(.8),
+                              ],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter),
+                        ),
+                        height: MediaQuery.of(context).size.height * 0.8,
+                        width: MediaQuery.of(context).size.width * 0.7,
+                        child: Column(
+                          children: [
+                            Container(
+                              height: MediaQuery.of(context).size.height * 0.07,
+                              width: MediaQuery.of(context).size.width * 0.7,
+                              color: Colors.black54,
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    width: 24,
+                                  ),
+                                  Center(
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.circle,
+                                          color: Colors.red,
+                                          size: 14,
+                                        ),
+                                        SizedBox(
+                                          width: 4,
+                                        ),
+                                        Icon(
+                                          Icons.circle,
+                                          color: Colors.yellow,
+                                          size: 14,
+                                        ),
+                                        SizedBox(
+                                          width: 4,
+                                        ),
+                                        Icon(
+                                          Icons.circle,
+                                          color: Colors.green,
+                                          size: 14,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 24,
+                                  ),
+                                  Text(
+                                    'Ruslan Badaev',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   ],
                 ),
